@@ -1,0 +1,19 @@
+div{
+	flex: 1;
+}
+.vert{
+	background-color: green;
+	height: 75px;
+}
+.bleu{
+	background-color: blue;
+	height: 75px;
+}
+.gris{
+	background-color: grey;
+	height: 75px;
+}
+.rouge{
+	background-color: red;
+	height: 75px;
+}

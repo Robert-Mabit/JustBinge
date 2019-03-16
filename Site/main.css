@@ -1,0 +1,201 @@
+@font-face{
+    font-family: oRoboto;
+    src: url("fonts/Roboto-Light.ttf")
+}
+@font-face{
+    font-family: oRobotoThin;
+    src: url("fonts/Roboto-Thin.ttf")
+}
+@font-face{
+    font-family: midnightDrive;
+    src: url("fonts/Midnight_Drive.otf")
+}
+@font-face{
+    font-family: pixel;
+    src: url("fonts/8-BIT WONDER.TTF")
+}
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    font-family: oRobotoThin;
+    list-style-type: none;
+}
+body{
+    background-color: rgb(19, 19, 19);
+}
+
+#myHeader{
+    width: 100%;
+    height: auto;
+    display: column;
+    flex-direction: row;
+    position: fixed;
+    background-color: rgb(35, 35, 35);
+    transition: .2s;
+    -webkit-backdrop-filter:blur(25px);
+}
+#myHeader.is-open{
+    background-color: rgba(255, 255, 255, 0.065);
+}
+
+header div{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    font-family: midnightDrive;
+    padding-top: 5px;
+    font-size: 30pt;
+}
+.subLogo{
+    padding-left: 10px;
+    margin-right: auto;
+    font-size: 13pt;
+    margin-top: auto;
+    margin-bottom: 10px;
+    font-family: oRobotoThin;   
+}
+#myNAV{
+    height: auto;
+    width: 100%;
+}
+
+#myNAV #myDIV{
+    
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 0px;
+    transition: max-height .2s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+}
+#myDownload{
+    margin-left: auto;
+}
+#myAbout{
+    margin-right: auto;
+}
+
+#myNAV #myDIV button{
+    padding-left: auto;
+    padding-right: auto;
+    width: 20%;
+}
+#myNAV #myDIV button p{
+    font-family: oRobotoThin;
+    font-size: 15pt;
+}
+
+button{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 12pt;
+}
+button:hover, button p:hover{
+    color: gray;
+    transition: .1s;
+}
+
+#mySmenu ul{
+    display: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#mySmenu ul.is-open{
+    display: flex;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 15pt;
+    background-color: orange;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#leftDiv{
+    min-height: 500px;
+    width: 48%;
+    background-color: red;
+    margin-right: 1%;
+}
+#rightDiv{
+    min-height: 500px;
+    width: 48%;
+    background-color: blue;
+    margin-left: 1%;
+}
+
+footer{
+    height: 100px;
+    background-color: rgb(26, 26, 26); 
+}
+
+footer p{
+    padding: 10px;
+    font-family: pixel;
+    font-size: 8pt;
+    color: rgb(73, 73, 73);
+}
+
+@media only screen and (max-width: 900px){
+    header{
+        flex-direction: column;
+    }
+
+    .logo{
+        margin-left: auto;
+        margin-right: 5px;
+        margin-bottom: 0px;
+    }
+    #myNAV{
+        flex-direction: column;
+    }
+
+    button{
+        margin-left: 0px;
+        width: 100%;
+        padding: 0px;
+    }
+
+    section{
+        margin-right:15px;
+        margin-left:15px;
+    }
+}
+
+
+@supports not (-webkit-backdrop-filter:blur(25px)) {
+    #myHeader.is-open, button{
+        background-color: rgb(35, 35, 35);
+    }
+    #myDIV{
+        background-color: rgb(35, 35, 35);
+    }
+    .logo{
+        margin-right: 3 px;
+    }
+}
